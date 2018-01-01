@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>ADD NEW TEACHER</title>
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+<style type="text/css">
+body
+{
+   font-family: 'Roboto', sans-serif;
+    background-image: download.jpg;
+    background-size:     cover;                      
+    background-repeat:   no-repeat;
+    background-position: center ;              
+  }
+.ribbon
+{
+font-size: 16px !important;
+width: 100%;
+position: relative;
+background: #8FCA1E;
+color: #fff;
+text-align: center;
+padding: 1em 1em;
+margin: 1em auto 1em;
+}
+.ribbon:before, .ribbon:after {
+content: "";
+position: absolute;
+display: block;
+bottom: -1em;
+border: 1.5em solid #8FCA1E;
+z-index: -1;
+}
+.ribbon:before {
+left: -2em;
+border-right-width: 1.5em;
+border-left-color: transparent;
+}
+.strokeme
+{
+     padding: 18px 20px;
+    color: orange;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;  
+}
+.ribbon:after {
+right: -2em;
+border-left-width: 1.5em;
+border-right-color: transparent;
+}
+.ribbon .ribbon-content:before, .ribbon .ribbon-content:after {
+content: "";
+position: absolute;
+display: block;
+border-style: solid;
+border-color: #8FCA1E transparent transparent transparent;
+bottom: -1em;
+}
+.ribbon .ribbon-content:before {
+left: 0;
+border-width: 1em 0 0 1em;
+}
+.ribbon .ribbon-content:after {
+right: 0;
+border-width: 1em 1em 0 0;
+}
+</style>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<body background="images.jpg">
+<div class="strokeme">
+ <h1 align="center"><font face="Lucida Calligraphy"><strong >Chalavara Higher Secondary School</font></h1>
+</div>
+<div id="login-overlay" class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h3 align="center" class="ribbon"><strong class="ribbon-content">Hello! You Are Creating New Teacher..!</h3>
+<p align="center"><a class="btn btn-success">
+<span class="glyphicon glyphicon-home">
+<a href="home.html"></span> Go Home</a>
+<a href="login.html" class="btn btn-danger">
+<span class="glyphicon glyphicon-log-out"></span> Logout
+</a></p>
+</div>
+<div class="modal-body">
+<form id="registerForm" method="POST" >
+<div class="form-group">
+<div class="col-xs-12">
+<label for="InputName">Teacher Id:</label>
+<div class="input-group">
+<input type="text" class="form-control" name="id" maxlength="5" placeholder="Teacher id.." required>
+<span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+</div>
+<br>
+<label for="InputName">Name:</label>
+<div class="input-group">
+<input type="text" class="form-control" name="id"    maxlength="50" placeholder="Name of teacher.." required>
+<span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+</div>
+<br>
+<label for="InputName">Class:</label>
+<div class="input-group">
+<input type="text" class="form-control" name="firstname" maxlength="3" placeholder="Enter The Class.."  required>
+<span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+</div>
+<br>
+<label for="InputName">Email Id:</label>
+<div class="input-group">
+<input type="email" class="form-control" name="email" placeholder="Email Of Teacher.." required>
+<span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+</div>
+<br>
+<label for="InputCity">Phone No:</label>
+<div class="input-group">
+<input type="text" class="form-control" name="no" maxlength="10" placeholder="Phone No.." required>
+<span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+</div>
+<br>
+</div>
+<div class="form-group">
+<div class="input-group-addon">
+<button type="submit" name="submit" id="submit" class="btn btn-success">
+<span class="glyphicon glyphicon-floppy-open"></span> Save To Database
+</button>
+</div>
+</div>
+</div>
+</form>
+</body>
+</script>
+</body>
+</html>
