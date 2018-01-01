@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>ADD NEW RESULT</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+	body{
+	font-family: 'Roboto', sans-serif;
+	background-image: apple.jpeg;
+    background-size:     cover;                      
+    background-repeat:   no-repeat;
+    background-position: center center;              
+	}
+.select1 {	
+	width: 60px; 
+	text-indent: 0.01px; 
+	text-overflow: ""; 
+	color: #000;
+	border-radius: 3px;
+	padding: 7px;
+	box-shadow: inset 0 0 5px rgba(000,000,000, 0.2);
+}
+.select1.balck {
+	background-color: transparent;
+}
+.select1.option3 {
+	border-radius: 5px 0;
+}
+.select2 {	
+	width: 255px; 
+	text-indent: 0.01px; 
+	text-overflow: ""; 
+	border:1px solid #A9A9A9;
+	border-radius: 3px;
+	padding: 7px;
+	box-shadow: inset 0 0 5px rgba(000,000,000, 0.2);
+}
+.select2.balck {
+	background-color: transparent;
+}
+.select2.option3 {
+	border-radius: 5px 0;
+}
+.ribbon 
+{
+ font-size: 16px !important;
+  width: 100%;   
+ position: relative;
+ background: #8FCA1E;
+ color: #fff;
+ text-align: center;
+ padding: 1em 1em; 
+ margin: 1em auto 1em; 
+}
+.ribbon:before, .ribbon:after {
+ content: "";
+ position: absolute;
+ display: block;
+ bottom: -1em;
+ border: 1.5em solid #8FCA1E;
+ z-index: -1;
+}
+.ribbon:before {
+ left: -2em;
+ border-right-width: 1.5em;
+ border-left-color: transparent;
+}
+.ribbon:after {
+ right: -2em;
+ border-left-width: 1.5em;
+ border-right-color: transparent;
+}
+.ribbon .ribbon-content:before, .ribbon .ribbon-content:after {
+ content: "";
+ position: absolute;
+ display: block;
+ border-style: solid;
+ border-color: #8FCA1E transparent transparent transparent;
+ bottom: -1em;
+}
+.ribbon .ribbon-content:before {
+ left: 0;
+ border-width: 1em 0 0 1em;
+}
+.ribbon .ribbon-content:after {
+ right: 0;
+ border-width: 1em 1em 0 0;
+}
+</style>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<body background="apple.jpeg">
+    <div id="login-overlay" class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+          <h3 align="center" class="ribbon"><strong class="ribbon-content">Hello!   You Are Creating New Student!</h3>
+          <p align="center"><a class="btn btn-success">
+        <span class="glyphicon glyphicon-home"><a href="home.html"</span> Go Home</a> 
+         <a href="login.html" class="btn btn-danger">
+        <span class="glyphicon glyphicon-log-out"></span> Logout
+        </a></p>
+            </div>
+            <div class="modal-body">
+                  <form id="registerForm" method="POST" >
+<!---form--->           <div class="form-group">
+<!---input width--->    <div class="col-xs-6">
+                        <label for="InputName">Adm.No:</label>
+                        <div class="input-group">
+                        <input type="text" class="form-control" name="id" placeholder="Enter Admission No.." onkeypress="validate(event)" maxlength="5" required>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                        </div>
+                        <br>
+                        <label for="InputName">Name:</label>
+                        <div class="input-group">
+                        <input type="text" class="form-control" name="firstname" placeholder="Name Of Student.." required>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                        </div>
+                         <br>
+                        <label for="InputName">House:</label>
+                        <div class="input-group">
+                        <input type="text" class="form-control" name="house" maxlength="50" placeholder="House" required>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                       <br>
+                       <label for="InputCity">Post Office:</label>     
+                        <div class="input-group">
+                        <input type="text" class="form-control" name="po" maxlength="20" placeholder="Post Office" required>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                        </div>
+                       <br>
+                       <div class='className'>
+                       <label for="InputCity">Category:</label>                    
+                       <select name="final_result" class="select2">
+                       <option value="Select">--Select--</option>
+                       <option value="OBC">OBC</option>
+                       <option value="SC">SC</option>
+                       <option value="ST">ST</option>
+                       <option value="General">General</option>
+                       </select>
+               </div>
+               <br>
+                </div>
+                    <div class="form-group">
+                    <div class="col-xs-6">
+                        <label for="InputName">D.O.B:</label>
+                        <div class="input-group">
+                        <input type="date" class="form-control" name="dob"  onkeypress="validate(event)">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                        </div>
+                        <br>
+                         <label for="InputStreetName">Student Class:</label>
+                        <div class="input-group">
+                        <input type="text" class="form-control" name="class" maxlength="3" placeholder="Enter Class Like 6A,8B,9C,10B etc" required>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                        </div>
+                        <br>
+                        <label for="InputCity">Street:</label>     
+                        <div class="input-group">
+                        <input type="text" class="form-control" name="street" maxlength="50" placeholder="Street" required>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                        </div>
+                        <br>
+                        <label for="InputPassword">Pin Code:</label>
+                        <div class="input-group">
+                        <input class="form-control" name="pin" maxlength="6" placeholder="Pin Code" required>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                        </div>
+                        <br>
+                        <label for="InputPassword">Phone No:</label>
+                        <div class="input-group">
+                        <input class="form-control" name="phnumber" maxlength="10" placeholder="Phone Number.." required>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>                     
+                    </div>
+                       <div class="form-group">
+                        <div class="col-xs-12">
+                        <label for="InputProvince">First Language:</label>
+                        <div class="input-group">
+                        <input type="text" class="form-control" name="fl" placeholder="First Language.." required>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>                              
+                  </div>
+                  <br>
+                  </div> 
+                  </div>  
+                    <br>
+                    <br>
+                      <div class="form-group">
+                        <div class="col-xs-12">
+                        <label for="InputProvince">Class Techer Name:</label>
+                        <div class="input-group">
+                        <input type="text" class="form-control" name="classteacher" placeholder="Class Techer Name.." required>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                  </div>
+                  <br>  
+                  </div> 
+                  </div> 
+                  <div class="form-group">
+                  <div class="input-group-addon"> 
+                  <button type="submit" name="submit" id="submit" class="btn btn-success">
+                  <span class="glyphicon glyphicon-floppy-open"></span> Save To Database
+                  </button>
+                  </div>
+                 </div>
+                </div>
+              </div>
+               </div>                         
+                  </div>
+                   </div>
+                </form>
+              </div><!---modal-body--->
+          </div>
+       </div>
+       </body>
+
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>
